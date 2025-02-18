@@ -1,7 +1,6 @@
 """
 Execute the script schema.sql to create the database schema.
 
-No imports outside the standard library may be used
 """
 from database_actions import database_actions
 
