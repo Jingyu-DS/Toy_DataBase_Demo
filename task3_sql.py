@@ -1,22 +1,17 @@
 """
 Each task is a function that returns the result of a SQL query.
 
-No other imports may be used
 """
 from database_connection import DatabaseConnection
 
 
-def task_3_1():
+def task_1():
     """
     List the top 5 most borrowed books in the library.
 
     The result should include the books title and number of times borrowed,
     ranked from most borrowed to least borrowed.
     """
-    # TODO: Implement me
-    
-    # I include ID as well in case there are repetitions in book name 
-    # as the titles are generated using limited number of vals
     with DatabaseConnection() as cursor:
         cursor.execute(
             """
@@ -46,20 +41,14 @@ def task_3_1():
 
 
 
-def task_3_2():
+def task_2():
     """
     For each month, calculate the total number of books borrowed and the
     average duration (in days) of a borrow.
 
-    - If a book has not been returned yet, it should not be included in
-    the average duration.
-    - If a book was borrowed in month X and returned in month Y, it should
-    be included in the month it was checked out.
-
     Display the months in a year-month format (YYYY-MM) and order
     by the month ascending.
     """
-    # TODO: Implement me
     with DatabaseConnection() as cursor:
         cursor.execute(
             """
@@ -84,13 +73,12 @@ def task_3_2():
 
 
 
-def task_3_3():
+def task_3():
     """
     Identify publishers that frequently collaborate with specific authors,
     where "frequent collaboration" means publishers that have published more
     than three books by the same author.
     """
-    # TODO: Implement me
     with DatabaseConnection() as cursor:
         cursor.execute(
             """
@@ -122,6 +110,6 @@ def task_3_3():
 
 
 if __name__ == '__main__':
-    print(task_3_1())
-    print(task_3_2())
-    print(task_3_3())
+    print(task_1())
+    print(task_2())
+    print(task_3())
