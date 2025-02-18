@@ -1,7 +1,3 @@
--- TODO: DEFINE SCHEMA FOR THE DATABASE 
-
-/*
-In case I need to re-run everything, I put the drop table commands here
 DROP TABLE IF EXISTS PhoneNumber;
 DROP TABLE IF EXISTS Borrows;
 DROP TABLE IF EXISTS Book_Edition;
@@ -11,8 +7,7 @@ DROP TABLE IF EXISTS Publisher;
 DROP TABLE IF EXISTS Author;
 DROP TABLE IF EXISTS Phone_Number;
 DROP TABLE IF EXISTS Student;
-*/
---- Create the table based on the schema indicated in the ER diagram
+
 CREATE TABLE IF NOT EXISTS Student (
     student_id INT PRIMARY KEY,
     student_name VARCHAR(30) NOT NULL,
