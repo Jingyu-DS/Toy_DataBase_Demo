@@ -1,4 +1,3 @@
--- TODO: Finish implementing the calculate_fine function 
 CREATE OR REPLACE FUNCTION calculate_fine()
 RETURNS TRIGGER AS $$
 DECLARE
@@ -17,7 +16,6 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- TODO: Add CREATE TRIGGER statement here
 CREATE TRIGGER trigger_calculate_fine
 BEFORE INSERT OR UPDATE OF return_date ON Borrows
 FOR EACH ROW
