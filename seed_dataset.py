@@ -1,7 +1,3 @@
-"""
-Seeding library database. No other imports may be used.
-"""
-
 import random
 from datetime import datetime, timedelta
 from database_actions import database_actions
@@ -126,9 +122,6 @@ def seed_database():
     Register 100 students.
     Record 500 borrow transactions, associating books with students.
     """
-    # TODO: Implement me
-    # Insert data for publishers
-    # execute_insert(self, table_name, fields, values)
     table_name = "Publisher"
     fields = ('publisher_id', 'publisher_name')
     values = [
